@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -x
+set -e
+
+TAG=betterpath/eliie
+NAME=eliie
+
+function usage () {
+    echo "Usage: ./deployment/bin/compose [up | eliie [bash | parse]]"
+}
+
+case "$1" in
+    "up")
+        docker rm -f $NAME
+        docker build . -t $TAG 
+        docker run --name $NAME -v $(pwd):/code -itd $TAG 
+        ;;
+    "eliie")
+        shift;
+        case "$1" in
+            "parse")
+                docker exec -it $NAME ./wrapper_for_parsing.sh
+                ;;
+            "bash")
+                docker exec -it $NAME bash
+                ;;
+            *)
+                usage
+                ;;
+        esac
+        ;;
+    *)
+        usage
+        ;;
+esac
