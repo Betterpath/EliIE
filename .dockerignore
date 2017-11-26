@@ -1,2 +1,5 @@
 .git
 .idea
+Dockerfile
+.dockerignore
+deployment/

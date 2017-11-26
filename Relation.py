@@ -11,10 +11,10 @@ __author__ = 'Tian Kang'
 #==================================================================#
 import os,codecs,re
 import sys
-from libsvm import svmutil
+import svmutil
 from features_dir import relation_features
 from xml.etree import ElementTree as ET
-import sys
+
 def main():
     m=svmutil.svm_load_model('trained_models/svm.model')
     relation_tag={0:'None',1:'has_value',2:'has_temp',3:'modified_by'}
