@@ -27,4 +27,3 @@ RUN echo $JAVA_HOME
 RUN which java
 RUN cd public_mm && ./bin/install.sh
 CMD tail -f /dev/null
-CMD tail -f /dev/null
