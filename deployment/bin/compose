@@ -12,8 +12,9 @@ function usage () {
 
 case "$1" in
     "up")
+        source .env
         docker rm -f $NAME | true
-        docker build . -t $TAG 
+        docker build . -t $TAG --build-arg S3_KEY=$S3_KEY --build-arg S3_SECRET=$S3_SECRET
         docker run --name $NAME -itd $TAG 
         ;;
     "eliie")
