@@ -15,6 +15,16 @@ WORKDIR /code/Lib-SVM/python
 RUN make
 ENV PATH /code/Lib-SVM/python:$PATH
 ENV PYTHONPATH /code/Lib-SVM:/code/Lib-SVM/python:$PYTHONPATH
+RUN apt-get update && \
+    apt-get install -y openjdk-7-jdk && \
+    apt-get install -y ant && \
+    apt-get clean
+RUN apt-get update && \
+    apt-get install ca-certificates-java && \
+    apt-get clean && \
+    update-ca-certificates -f
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
+RUN export JAVA_HOME
 WORKDIR /root
 ARG S3_KEY
 ARG S3_SECRET
