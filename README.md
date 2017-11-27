@@ -1,4 +1,6 @@
-# CTEC_Parser
+# EliIE 
+
+**A CTEC Parser**
 
 __Introduction__
 ------------
