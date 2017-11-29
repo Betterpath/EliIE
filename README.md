@@ -35,14 +35,12 @@ GDS-5 score < 6.
 Within the previous 2 years, unstable and clinically siginificant cardivascular disease.
 ```
 
-![](https://github.com/Tian312/CTEC_Parser/blob/master/Supp%20Materials/example_input.png)
-
 Example output:
 
 ```xml
 <root>
   <sent>
-    <text>Age 70 years or older ;</text>
+    <text>Age 70 years or older .</text>
     <entity class="Observation" index="T1" negated="N" relation="T2:has_value" start="0"> Age </entity>
     <attribute class="Measurement" index="T2" start="1"> 70 years or older </attribute>
   </sent>
@@ -97,8 +95,6 @@ Example output:
   </sent>
 </root>
 ```
-
-![](https://github.com/Tian312/CTEC_Parser/blob/master/Supp%20Materials/example_output.png)
 
 ## User Guide
 
