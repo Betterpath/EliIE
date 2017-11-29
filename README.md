@@ -23,7 +23,7 @@ Primary steps:
 
 Exmaple input:
 
-``` xml
+```xml
 Age 70 years or older.
 Must have a clinical diagnosis of Alzheimer's Disease.
 Life expectancy less than 1 year.
@@ -104,8 +104,9 @@ __Fast Usage:__
 
 1. open `wrapper_for_parsing.sh`
 2. set the parameter lists to your task-based ones
-3. run "`sh wrapper_for_parsing.sh`" and parsing results will be generated in XML files.
-(See example output directly running "`sh wrapper_for_parsing.sh`" without changing )
+3. run `sh wrapper_for_parsing.sh` and parsing results will be generated in XML files.
+
+(See example output directly running `sh wrapper_for_parsing.sh` without changing)
 
 
 __Step-by-stey Usage:__
@@ -153,6 +154,6 @@ The example output would be Tempfile/test_NER.xml and Tempfile/test_Parsed.xml)
 
 Make sure to rename `.env.example` to `.env` and update the AWS S3 credentials.
 
-`./deployment/bin/compose [up]`
+`Usage: ./deployment/bin/compose [up | eliie [bash | parse | skr | wsd]]`
 
 [BACK TO TOP](#readme)
