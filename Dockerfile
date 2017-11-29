@@ -31,6 +31,7 @@ WORKDIR /root/Tools/MetaMap
 ADD download.sh /root/Tools/MetaMap/download.sh
 RUN ./download.sh
 RUN tar xfj public_mm_linux_main_2016v2.tar.bz2
+WORKDIR /root/Tools/MetaMap/public_mm
 RUN ./bin/install.sh
 WORKDIR /code
 ADD . /code
