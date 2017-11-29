@@ -109,7 +109,7 @@ __Fast Usage:__
 (See example output directly running `sh wrapper_for_parsing.sh` without changing)
 
 
-__Step-by-stey Usage:__
+__Step-by-step Usage:__
 
 1. NER step: run
     `python NamedEntityRecognition.py $1:<input directory> $2:<input text name> $3:<output directory>`
