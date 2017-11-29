@@ -11,7 +11,7 @@ Developed in [Dr. Chunhua Weng's lab](http://people.dbmi.columbia.edu/~chw7007) 
 __Author__: Tian Kang<br>
 __Affiliation__: Department of Biomedical Informatics, Columbia University<br>
 __Contact Email__: tk2624@cumc.columbia.edu<br>
-__Last update__: June 20, 2016  (add Negation detection in NER step)
+__Last update__: June 20, 2016  (add Negation detection in NER step)<br>
 __Version__: 1.0
 
 Primary steps:
