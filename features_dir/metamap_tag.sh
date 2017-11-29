@@ -15,8 +15,11 @@ METAMAP_ROOT=~/Tools/MetaMap
 # -N specifies "fielded" output and is assumed by tools using this script
 # -J specifies restriction to the given UMLS semantic types
 #METAMAP_ARGS="-N -J anab,anst,bdsu,bdsy,blor,bpoc,bsoj,celc,cell,emst,ffas,tisu"
-METAMAP_ARGS="-N -J aapp,acab,aggp,anab,anst,antb,arch,bacs,bact,bdsu,bdsy,bhvr,biof,blor,bmod,bodm,bpoc,bsoj,cgab,chem,chvf,chvs,clna,clnd,cnce,comd,diap,drdd,dsyn,emod,emst,enzy,euka,famg,ffas,fndg,hlca,hops,horm,imft,inch,inpo,irda,lang,lbpr,lbtr,lipd,medd,menp,mobd,moft,neop,nnon,npop,nsba,orch,orga,orgf,ortf,patf,qlco,rcpt,resa,resd,sbst,sosy,spco,strd,tisu,tmco,topp,virs,vita"
 
+# TODO: Make this work
+#METAMAP_ARGS="-N -J aapp,acab,aggp,anab,anst,antb,arch,bacs,bact,bdsu,bdsy,bhvr,biof,blor,bmod,bodm,bpoc,bsoj,cgab,chem,chvf,chvs,clna,clnd,cnce,comd,diap,drdd,dsyn,emod,emst,enzy,euka,famg,ffas,fndg,hlca,hops,horm,imft,inch,inpo,irda,lang,lbpr,lbtr,lipd,medd,menp,mobd,moft,neop,nnon,npop,nsba,orch,orga,orgf,ortf,patf,qlco,rcpt,resa,resd,sbst,sosy,spco,strd,tisu,tmco,topp,virs,vita"
 
-$METAMAP_ROOT/public_mm/bin/metamap13 $METAMAP_ARGS $@
+METAMAP_ARGS="-N -J aapp,acab,aggp,anab,anst,antb,arch,bacs,bact,bdsu,bdsy,bhvr,biof,blor,bmod,bodm,bpoc,bsoj,cgab,chem,chvf,chvs,clna,clnd,cnce,comd,diap,drdd,dsyn,emod,emst,enzy,euka,famg,ffas,fndg,hlca,hops,horm,imft,inch,inpo,irda,lang,lbpr,lbtr,medd,menp,mobd,moft,neop,nnon,npop,orch,orga,orgf,ortf,patf,qlco,rcpt,resa,resd,sbst,sosy,spco,tisu,tmco,topp,virs,vita"
+
+$METAMAP_ROOT/public_mm/bin/metamap16 $METAMAP_ARGS $@
 

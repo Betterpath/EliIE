@@ -33,6 +33,11 @@ RUN ./download.sh
 RUN tar xfj public_mm_linux_main_2016v2.tar.bz2
 WORKDIR /root/Tools/MetaMap/public_mm
 RUN ./bin/install.sh
+ADD CRFPP /src/CRFPP
+WORKDIR /src/CRFPP
+RUN ./configure 
+RUN make
 WORKDIR /code
+ENV PATH /src/CRFPP:$PATH
 ADD . /code
 CMD tail -f /dev/null

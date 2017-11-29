@@ -78,6 +78,7 @@ irda|T130|Indicator, Reagent, or Diagnostic Aid
 lang|T171|Language
 lbpr|T059|Laboratory Procedure
 lbtr|T034|Laboratory or Test Result
+lipd|T119|Lipid
 mamm|T015|Mammal
 mbrt|T063|Molecular Biology Research Technique
 mcha|T066|Machine Activity
@@ -90,6 +91,7 @@ mosq|T085|Molecular Sequence
 neop|T191|Neoplastic Process
 nnon|T114|Nucleic Acid, Nucleoside, or Nucleotide
 npop|T070|Natural Phenomenon or Process
+nsba|T124|Neuroreactive Substance or Biogenic Amine
 nusq|T086|Nucleotide Sequence
 ocac|T057|Occupational Activity
 ocdi|T090|Occupation or Discipline
@@ -122,6 +124,7 @@ shro|T095|Self-help or Relief Organization
 socb|T054|Social Behavior
 sosy|T184|Sign or Symptom
 spco|T082|Spatial Concept
+strd|T110|Steroid
 tisu|T024|Tissue
 tmco|T079|Temporal Concept
 topp|T061|Therapeutic or Preventive Procedure

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASEDIR=/root/public_mm
+BASEDIR=/root/Tools/MetaMap/public_mm
 MEDPOSTDIR=$BASEDIR/MedPost-SKR
 DATADIR=$MEDPOSTDIR/data
 SERVERDIR=$MEDPOSTDIR/Tagger_server

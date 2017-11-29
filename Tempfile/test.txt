@@ -1,4 +1,4 @@
-Age 70 years or older;
+Age 70 years or older.
 Must have a clinical diagnosis of Alzheimer's Disease.
 Life expectancy less than 1 year.
 Subjects must be in reasonably good health, based on medical history, physical examination, vital signs, and ECG.

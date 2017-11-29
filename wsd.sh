@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASEDIR=/root/public_mm
+BASEDIR=/root/Tools/MetaMap/public_mm
 WSD=$BASEDIR
 SERVERDIR=$WSD/WSD_Server
 JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/

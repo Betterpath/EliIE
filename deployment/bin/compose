@@ -15,7 +15,7 @@ case "$1" in
         source .env
         docker rm -f $NAME | true
         docker build . -t $TAG --build-arg S3_KEY=$S3_KEY --build-arg S3_SECRET=$S3_SECRET
-        docker run --name $NAME -itd $TAG 
+        docker run --name $NAME -v $(pwd)/Tempfile:/code/Tempfile -itd $TAG 
         ;;
     "eliie")
         shift;

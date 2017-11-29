@@ -1,3 +1,6 @@
 [submodule "Lib-SVM"]
 	path = Lib-SVM
 	url = git@github.com:Betterpath/Lib-SVM.git
+[submodule "CRFPP"]
+	path = CRFPP
+	url = git@github.com:Betterpath/CRFPP.git
