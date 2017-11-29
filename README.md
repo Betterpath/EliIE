@@ -131,10 +131,11 @@ The example output would be Tempfile/test_NER.xml and Tempfile/test_Parsed.xml)
     Go to `features_dir` and open `metamap_tag.sh`; follow the guidance to change the MetaMap root dir and start running
 
 2.  Python package required:
-    **nltk**
-    **networkx**
-    **codecs**
-    [**libsvm**](https://www.csie.ntu.edu.tw/~cjlin/libsvm)
+
+    **nltk**<br>
+    **networkx**<br>
+    **codecs**<br>
+    [**libsvm**](https://www.csie.ntu.edu.tw/~cjlin/libsvm)<br>
     [**practnlptools**](https://pypi.python.org/pypi/practnlptools/1.0)
 
 
