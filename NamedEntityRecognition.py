@@ -13,7 +13,9 @@ __author__ = 'Tian Kang'
 #==================================================================#
 
 import os.path
+
 _PATH = os.path.join( *os.path.split(__file__)[:-1] )
+
 import sys,string,os,re,csv
 import codecs
 from text_processing import txtconll as t2c
@@ -21,7 +23,9 @@ from text_processing import preprocess
 from features_dir import POS,BrownClustering,umls_identify
 from text_processing import label_from_annotation as labeling
 import nltk
+
 #nltk.download('averaged_perceptron_tagger')
+
 import screen
 from nltk.stem.lancaster import LancasterStemmer
 from bin import readfromdir
@@ -187,9 +191,6 @@ tag_included.append('Negation_cue')
 curpath = os.path.abspath(os.curdir)
 
 
-
-
-
 def main():
 
     '''
@@ -210,7 +211,7 @@ def main():
     #========== predict ==========
 
 
-# read files:
+    # read files:
     input_dir=sys.argv[1]+"/"+sys.argv[2]
     print "Reading text from ",input_dir
     mytrial=codecs.open(input_dir).read()
@@ -282,4 +283,5 @@ def main():
 
 
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    main()

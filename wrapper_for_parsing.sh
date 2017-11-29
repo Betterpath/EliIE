@@ -18,13 +18,8 @@
 #   libsvm  (https://www.csie.ntu.edu.tw/~cjlin/libsvm , https://github.com/cjlin1/libsvm/tree/master/python)
 #   practnlptools   (https://pypi.python.org/pypi/practnlptools/1.0)
 
-#!!!! Personalize your parameters before parsing !!!!#
-
-# change to your input dir
 INPUT_DIR='Tempfile'
-# change to your input .txt file name
 INPUT_TEXT='test.txt'
-# change to your output dir
 OUTPUT_DIR='Tempfile'
 
 python NamedEntityRecognition.py $INPUT_DIR $INPUT_TEXT $OUTPUT_DIR

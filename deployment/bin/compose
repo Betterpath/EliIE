@@ -7,7 +7,7 @@ TAG=betterpath/eliie
 NAME=eliie
 
 function usage () {
-    echo "Usage: ./deployment/bin/compose [up | eliie [bash | parse]]"
+    echo "Usage: ./deployment/bin/compose [up | eliie [bash | parse | skr | wsd]]"
 }
 
 case "$1" in
@@ -20,8 +20,14 @@ case "$1" in
     "eliie")
         shift;
         case "$1" in
+            "skr")
+                docker exec -it $NAME /code/skr.sh
+                ;;
+            "wsd")
+                docker exec -it $NAME /code/wsd.sh
+                ;;
             "parse")
-                docker exec -it $NAME ./wrapper_for_parsing.sh
+                docker exec -it $NAME bash -c "cd /code && ./wrapper_for_parsing.sh"
                 ;;
             "bash")
                 docker exec -it $NAME bash
