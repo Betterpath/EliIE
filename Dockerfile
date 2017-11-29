@@ -39,5 +39,8 @@ RUN ./configure
 RUN make
 WORKDIR /code
 ENV PATH /src/CRFPP:$PATH
+RUN pip install supervisor
+ADD supervisord.conf /usr/local/etc/supervisord.conf
+ENV LD_LIBRARY_PATH=/root/Tools/MetaMap/public_mm/WSD_Server/lib:/usr/lib:$LD_LIBRARY_PATH
 ADD . /code
-CMD tail -f /dev/null
+CMD supervisord
