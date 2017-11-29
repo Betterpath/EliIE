@@ -117,8 +117,9 @@ __Step-by-stey Usage:__
     `python Relation.py $3:<output directory> $2:<input text name>`
 
 __Example commands:__
-    1. `python NamedEntityRecognition.py Tempfile test.txt Tempfile`
-    2. `python Relation.py Tempfile test.txt` 
+
+1. `python NamedEntityRecognition.py Tempfile test.txt Tempfile`
+2. `python Relation.py Tempfile test.txt` 
 
 The example output would be Tempfile/test_NER.xml and Tempfile/test_Parsed.xml
 
