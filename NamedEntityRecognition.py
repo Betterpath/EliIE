@@ -258,7 +258,6 @@ def main():
 
 
     for child in root:
-
         sent=''
         for child2 in child.findall('text'):
             sent=child2.text
