@@ -1,6 +1,10 @@
 import requests
 import json
+import os
+from requests.auth import HTTPBasicAuth
 
+secret = os.getenv('FLASK_SECRET')
+user = os.getenv('FLASK_USER')
 data = """
 Age 70 years or older.
 Must have a clinical diagnosis of Alzheimer's Disease.
@@ -12,7 +16,7 @@ Current use of donepezil, rivastigmine or galantamine.
 GDS-5 score < 6.
 Within the previous 2 years, unstable and clinically siginificant cardivascular disease.
 """
-url = 'http://192.168.99.100:5000/'
-r = requests.post(url, data={'data': data})
+url = 'http://192.168.99.100:5000/eliie'
+r = requests.post(url, data={'data': data}, auth=requests.auth.HTTPBasicAuth(user, secret))
 
 print r.text
