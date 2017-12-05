@@ -17,7 +17,10 @@ case "$1" in
         docker rm -f $NAME | true
         docker build . -t $TAG --build-arg S3_KEY=$S3_KEY --build-arg S3_SECRET=$S3_SECRET \
                --build-arg FLASK_USER=$FLASK_USER --build-arg FLASK_SECRET=$FLASK_SECRET
-        docker run --name $NAME -v $(pwd)/output:/code/output -p 5000:5000 -itd $TAG 
+        docker run --name $NAME -v $(pwd)/output:/code/output \
+               -e VIRTUAL_HOST=eliie.betterpath.com \
+               -e VIRTUAL_PORT=5000 \
+               -p 5000:5000 -itd $TAG 
         ;;
     "eliie")
         shift;
