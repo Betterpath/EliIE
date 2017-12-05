@@ -41,5 +41,9 @@ WORKDIR /code
 ENV PATH /src/CRFPP:$PATH
 ADD supervisord.conf /usr/local/etc/supervisord.conf
 ENV LD_LIBRARY_PATH=/root/Tools/MetaMap/public_mm/WSD_Server/lib:/usr/lib:$LD_LIBRARY_PATH
+ARG FLASK_USER
+ARG FLASK_SECRET
+ENV FLASK_USER=${FLASK_USER}
+ENV FLASK_SECRET=${FLASK_SECRET}
 ADD . /code
 CMD supervisord

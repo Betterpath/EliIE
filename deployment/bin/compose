@@ -15,7 +15,8 @@ case "$1" in
     "up")
         source .env
         docker rm -f $NAME | true
-        docker build . -t $TAG --build-arg S3_KEY=$S3_KEY --build-arg S3_SECRET=$S3_SECRET
+        docker build . -t $TAG --build-arg S3_KEY=$S3_KEY --build-arg S3_SECRET=$S3_SECRET \
+               --build-arg FLASK_USER=$FLASK_USER --build-arg FLASK_SECRET=$FLASK_SECRET
         docker run --name $NAME -v $(pwd)/output:/code/output -p 5000:5000 -itd $TAG 
         ;;
     "eliie")
