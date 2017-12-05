@@ -118,10 +118,10 @@ __Step-by-step Usage:__
 
 __Example commands:__
 
-1. `python NamedEntityRecognition.py Tempfile test.txt Tempfile`
-2. `python Relation.py Tempfile test.txt` 
+1. `python NamedEntityRecognition.py output test.txt output`
+2. `python Relation.py output test.txt` 
 
-The example output would be Tempfile/test_NER.xml and Tempfile/test_Parsed.xml
+The example output would be output/test_NER.xml and output/test_Parsed.xml
 
 
 ## Prerequired Installation:

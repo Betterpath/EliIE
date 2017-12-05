@@ -35,11 +35,11 @@ def main():
     index=[]
     for child in root:
 
-        syn_features=codecs.open('Tempfile/relation_scale','w')
+        syn_features=codecs.open('output/relation_scale','w')
         temp_pairs=relation_features.generate_pairs(child,syn_features)
         if temp_pairs:
             try:
-                y,x=svmutil.svm_read_problem('Tempfile/relation_scale')
+                y,x=svmutil.svm_read_problem('output/relation_scale')
                 p_label,p_acc,p_val=svmutil.svm_predict(y,x,m)
             except ValueError:
                 for child2 in child.findall('text'):
@@ -90,7 +90,7 @@ def main():
     relation_excuted=os.path.exists("in.parse")
     if relation_excuted:
         os.system('rm in.parse')
-    os.system('rm Tempfile/relation_scale')
+    os.system('rm output/relation_scale')
     print "Writing Relation xml to ", output_dir
     new_tree=codecs.open(output_dir,'w')
     tree.write(new_tree)

@@ -18,11 +18,11 @@
 #   libsvm  (https://www.csie.ntu.edu.tw/~cjlin/libsvm , https://github.com/cjlin1/libsvm/tree/master/python)
 #   practnlptools   (https://pypi.python.org/pypi/practnlptools/1.0)
 
-INPUT_DIR='Tempfile'
+INPUT_DIR='output'
 INPUT_TEXT='test.txt'
-OUTPUT_DIR='Tempfile'
+OUTPUT_DIR='output'
 
 python NamedEntityRecognition.py $INPUT_DIR $INPUT_TEXT $OUTPUT_DIR
 echo "Named Entity Recognition Finished!"
-python Relation.py  $OUTPUT_DIR $INPUT_TEXT
+python Relation.py $OUTPUT_DIR $INPUT_TEXT
 echo "Parsing Finished!"

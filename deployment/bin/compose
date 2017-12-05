@@ -5,9 +5,10 @@ set -e
 
 TAG=betterpath/eliie
 NAME=eliie
+COMPOSE_PROJECT_NAME=$NAME
 
 function usage () {
-    echo "Usage: ./deployment/bin/compose [up | eliie [bash | parse]]"
+    echo "Usage: ./deployment/bin/compose [up | eliie [bash | parse] | deploy <host>]"
 }
 
 case "$1" in
@@ -15,7 +16,7 @@ case "$1" in
         source .env
         docker rm -f $NAME | true
         docker build . -t $TAG --build-arg S3_KEY=$S3_KEY --build-arg S3_SECRET=$S3_SECRET
-        docker run --name $NAME -v $(pwd)/Tempfile:/code/Tempfile -itd $TAG 
+        docker run --name $NAME -v $(pwd)/output:/code/output -p 5000:5000 -itd $TAG 
         ;;
     "eliie")
         shift;
@@ -30,6 +31,12 @@ case "$1" in
                 usage
                 ;;
         esac
+        ;;
+    "deploy")
+        HOST=ec2-user@$2
+        rsync -avqz --exclude '.git' . $HOST:/code/$COMPOSE_PROJECT_NAME
+        ssh $HOST "cd /code/$COMPOSE_PROJECT_NAME && ./deployment/bin/compose up"
+        ssh $HOST "rm /code/$COMPOSE_PROJECT_NAME/.env"
         ;;
     *)
         usage

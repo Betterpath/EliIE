@@ -9,19 +9,19 @@ def formating_for_metamap(current_path,sent,filename):
     id=0
 
 
-    input_dir=current_path+'/Tempfile/metamap_input'+filename+'.temp'
+    input_dir=current_path+'/output/metamap_input'+filename+'.temp'
     output_dir=input_dir+'.out'
     metamap_command='sh '+current_path+'/features_dir/metamap_tag.sh '+input_dir+' >/dev/null'
     rm_command='rm '+input_dir+' '+output_dir
 
     temp_output=codecs.open(input_dir,'w')
 
- #   temp_output=codecs.open('Tempfile/metamap_input.temp','w')
+ #   temp_output=codecs.open('output/metamap_input.temp','w')
     print >>temp_output,str(id)+'|'+sent
     os.system(metamap_command)
- #   os.system('sh features_dir/metamap_tag.sh Tempfile/metamap_input.temp >/dev/null')
+ #   os.system('sh features_dir/metamap_tag.sh output/metamap_input.temp >/dev/null')
     metamap_output=codecs.open(output_dir)
- #   metamap_output=codecs.open("Tempfile/metamap_input.temp.out")
+ #   metamap_output=codecs.open("output/metamap_input.temp.out")
 
     os.system(rm_command)
     return(metamap_output)

@@ -1,0 +1,15 @@
+click==6.7
+decorator==4.1.2
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+meld3==1.0.2
+networkx==2.0
+nltk==3.2.5
+-e git+https://github.com/Betterpath/Pract-NLP-Tools.git@241bcdb37eb4f9e5b495731c159f869e917d81dd#egg=practNLPTools
+screen==1.0.1
+six==1.11.0
+supervisor==3.3.3
+virtualenv==15.1.0
+Werkzeug==0.12.2
