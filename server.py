@@ -13,7 +13,7 @@ app.config['BASIC_AUTH_PASSWORD'] = os.getenv('FLASK_SECRET')
 basic_auth = BasicAuth(app)
 
 
-@app.route('/eliie', methods=['POST'])
+@app.route('/api', methods=['POST'])
 @basic_auth.required
 def parse():
     file_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
